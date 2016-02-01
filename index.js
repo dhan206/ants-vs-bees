@@ -9,7 +9,6 @@ if(process.argv[2] === '--debug'){
   var game = new ants.AntGame(colony, hive);
   
   //run hard-coded commands
-  game.deployAnt('Fire', '0,4'); //for example
   game.takeTurn();
   game.takeTurn();
   game.takeTurn();
