@@ -4,7 +4,7 @@ var ants = require('./lib/ants_ui.js'); //load the game (UI-level) to interact w
 
 if(process.argv[2] === '--debug'){
   //the scenario to play
-  var colony = ants.AntColony.createWetColony();
+  var colony = ants.AntColony.createTestColony();
   var hive = ants.Hive.createTestHive();
   var game = new ants.AntGame(colony, hive);
   
@@ -13,7 +13,11 @@ if(process.argv[2] === '--debug'){
   game.takeTurn();
   game.takeTurn();
   game.takeTurn();
-//   ants.showMapOf(game); //show the board, for example
+  game.deployAnt("Grower", "0,5");
+  game.deployAnt("Ninja", "0,4");
+  game.deployAnt("Ninja", "0,3");
+  game.deployAnt("Ninja", "0,2");
+  //ants.showMapOf(game); //show the board, for example
 
 
   ants.play(game); //launch the interactive version from here
