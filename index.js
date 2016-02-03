@@ -9,14 +9,12 @@ if(process.argv[2] === '--debug'){
   var game = new ants.AntGame(colony, hive);
   
   //run hard-coded commands
-  game.takeTurn();
-  game.takeTurn();
-  game.takeTurn();
-  game.takeTurn();
-  game.deployAnt("Grower", "0,5");
-  game.deployAnt("Ninja", "0,4");
-  game.deployAnt("Ninja", "0,3");
-  game.deployAnt("Ninja", "0,2");
+  game.deployAnt("Grower", "0,0");
+  game.deployAnt("Bodyguard", "0,0");
+  game.deployAnt("Bodyguard", "0,1");
+  game.deployAnt("Scuba", "0,1");
+  game.deployAnt("Queen", "0,2");
+  game.deployAnt("Queen", "0,3");
   //ants.showMapOf(game); //show the board, for example
 
 
